@@ -180,15 +180,55 @@
       </div>
     </footer>
 
-    <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
-      <div class="cookie-banner__content">
-        <p class="cookie-banner__text">
-          We use only essential cookies to ensure basic site functionality.
-          Learn more in our
-          <a class="link-professional" href="privacy.html">Privacy Policy</a>.
-        </p>
+    <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Privacy settings">
+      <div class="cookie-banner__inner">
+        <div class="cookie-banner__copy">
+          <h2 class="cookie-banner__title">Privacy Settings</h2>
+          <p class="cookie-banner__text">
+            This site uses cookies to provide its services and improve your experience.
+            Optional cookies (functional, analytics, and marketing) are disabled by default
+            and can be enabled with your consent.
+          </p>
+          <div class="cookie-banner__links">
+            <a class="link-professional" href="privacy.html">Privacy Policy</a>
+            <a class="link-professional" href="impressum.html">Impressum</a>
+            <a class="link-professional" href="privacy.html">More information</a>
+          </div>
+        </div>
         <div class="cookie-banner__actions">
-          <button class="btn-primary cookie-accept" type="button">Accept</button>
+          <button class="cookie-btn cookie-save" type="button">Save settings</button>
+          <button class="cookie-btn cookie-reject" type="button">Reject</button>
+          <button class="cookie-btn cookie-accept-all" type="button">Accept all</button>
+        </div>
+      </div>
+      <div class="cookie-banner__toggles" role="group" aria-label="Cookie categories">
+        <div class="cookie-toggle">
+          <span>Essential</span>
+          <label class="switch">
+            <input type="checkbox" checked disabled data-cookie="essential" />
+            <span class="switch__slider"></span>
+          </label>
+        </div>
+        <div class="cookie-toggle">
+          <span>Functional</span>
+          <label class="switch">
+            <input type="checkbox" data-cookie="functional" />
+            <span class="switch__slider"></span>
+          </label>
+        </div>
+        <div class="cookie-toggle">
+          <span>Analytics</span>
+          <label class="switch">
+            <input type="checkbox" data-cookie="analytics" />
+            <span class="switch__slider"></span>
+          </label>
+        </div>
+        <div class="cookie-toggle">
+          <span>Marketing</span>
+          <label class="switch">
+            <input type="checkbox" data-cookie="marketing" />
+            <span class="switch__slider"></span>
+          </label>
         </div>
       </div>
     </div>
