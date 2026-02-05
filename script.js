@@ -20,3 +20,30 @@ const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
+
+const consentKey = "cookieConsent";
+const cookieBanner = document.querySelector(".cookie-banner");
+const cookieAcceptButton = document.querySelector(".cookie-accept");
+
+if (cookieBanner && cookieAcceptButton) {
+  let hasConsent = false;
+
+  try {
+    hasConsent = localStorage.getItem(consentKey) === "accepted";
+  } catch (error) {
+    hasConsent = false;
+  }
+
+  if (!hasConsent) {
+    cookieBanner.classList.add("is-visible");
+  }
+
+  cookieAcceptButton.addEventListener("click", () => {
+    try {
+      localStorage.setItem(consentKey, "accepted");
+    } catch (error) {
+      // Ignore storage errors and still hide the banner.
+    }
+    cookieBanner.classList.remove("is-visible");
+  });
+}
